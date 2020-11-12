@@ -31,7 +31,6 @@ public class AuthenticationManager implements ReactiveAuthenticationManager{
 			usuario = null;
 		}
 		
-		
 		if (usuario != null && jwtUtil.validateToken(token)) {
 			Claims claims = jwtUtil.getAllClaimsFromToken(token);
 			
